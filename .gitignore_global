@@ -1,0 +1,37 @@
+        
+.DS_Store
+.gitconfig
+.*
+desktop.ini
+.node_repl_history
+.npm/
+.oh-my-zsh/
+.vscode/*
+.zcompdump-MacBook Air de Diego-5.8
+.zprofile
+.zprofile.pysave
+.zsh_history
+.zsh_sessions/
+.zshenv
+.zshrc
+.Applications/
+.Creative Cloud Files/
+.Desktop/
+.Documentos/
+.Documents/
+.Downloads/
+.Library/
+.Movies/
+.Music/
+.Pictures/
+.Public/
+.app.js
+.bin/
+.env/
+.node_modules/
+.package-lock.json
+.package.json
+.routes/
+.spec/
+.test-node.js
+.views/
