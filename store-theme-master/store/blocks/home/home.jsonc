@@ -3,39 +3,51 @@
     "blocks": [
       "countdown.title",
       "countdown",
-      "list-context.image-list#demo",
+      "info-card#button-right",
+      "info-card#button-left",
       "__fold__.mobile",
       "flex-layout.row#deals",
       "__fold__.desktop",
       "rich-text#shelf-title",
       "flex-layout.row#shelf",
       "info-card#home",
-      "rich-text#question",
-      "rich-text#link",
       "newsletter"
     ]
+  },
+
+  "info-card#button-right": {
+    "props": {
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "headline": "Plant Based",
+      "subhead": "Traga novos sabores para sua cozinha.<br> Conheça nossos pratos:",
+      "callToActionMode": "button",
+      "callToActionText": "Cardápio",
+      "callToActionUrl": "/sale/d",
+      "textAlignment": "center",
+      "block-class":"button-right"
+    }
+  },
+  "info-card#button-left": {
+    "props": {
+    "isFullModeStyle": false,
+    "textPosition": "left",
+    "imageUrl": "https://images.unsplash.com/photo-1627866749431-767611d9dd8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "headline": "Refeições Congeladas",
+    "subhead": "Receba em casa e acumule pontos.<br>",
+    "callToActionMode": "link",
+    "callToActionText": "Quero saber mais!",
+    "textAlignment": "center",
+    "block-class":"button-left"
+    }
   },
 
   "shelf#home": {
     "blocks": ["product-summary.shelf"]
   },
 
-  "list-context.image-list#demo": {
-    "children": ["slider-layout#demo-images"],
-    "props": {
-      "height": 720,
-      "images": [
-        {
-          "image": "https://storecomponents.vteximg.com.br/arquivos/banner-principal.png",
-          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-principal-mobile.jpg"
-        },
-        {
-          "image": "https://storecomponents.vteximg.com.br/arquivos/banner.jpg",
-          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-principal-mobile.jpg"
-        }
-      ]
-    }
-  },
+
   "slider-layout#demo-images": {
     "props": {
       "itemsPerPage": {
@@ -51,7 +63,7 @@
 
   "rich-text#shelf-title": {
     "props": {
-      "text": "## Summer",
+      "text": "Refeições EatGreen",
       "blockClass": "shelfTitle"
     }
   },
@@ -83,26 +95,12 @@
       "id": "info-card-home",
       "isFullModeStyle": false,
       "textPosition": "left",
-      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
+      "imageUrl": "https://images.unsplash.com/photo-1565895405137-3ca0cc5088c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
       "headline": "Clearance Sale",
       "callToActionText": "DISCOVER",
       "callToActionUrl": "/sale/d",
       "blockClass": "info-card-home",
       "textAlignment": "center"
-    }
-  },
-
-  "rich-text#question": {
-    "props": {
-      "text": "**This is an example store built using the VTEX platform.\nWant to know more?**",
-      "blockClass": "question"
-    }
-  },
-
-  "rich-text#link": {
-    "props": {
-      "text": "\n**Reach us at**\nwww.vtex.com.br",
-      "blockClass": "link"
     }
   }
 }

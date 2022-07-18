@@ -19,7 +19,7 @@
       "fullWidth": true
     }
   },
-  
+
   "flex-layout.row#3-desktop": {
     "props": {
       "blockClass": "menu-link",
@@ -55,7 +55,7 @@
       "fullWidth": true
     },
     "children": [
-      "flex-layout.col#logo-desktop",
+      "flex-layout.col#image-desktop",
       "flex-layout.col#category-menu",
       "flex-layout.col#spacer",
       "search-bar",
@@ -64,11 +64,11 @@
       "minicart.v2"
     ]
   },
-  "flex-layout.col#logo-desktop": {
+  "flex-layout.col#image-desktop": {
     "props": {
       "verticalAlign": "middle"
     },
-    "children": ["logo#desktop"]
+    "children": ["image#desktop"]
   },
   "flex-layout.col#category-menu": {
     "props": {
@@ -76,13 +76,12 @@
     },
     "children": ["vtex.menu@2.x:menu#category-menu"]
   },
-  "logo#desktop": {
+  "image#desktop": {
     "props": {
       "title": "Logo",
-      "href": "/",
-      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo.png",
-      "width": "180",
-      "height": "12"
+      "src": "assets/logo-eat-green.png",
+      "maxWidth": "80%",
+      "maxHeight": "60%"
     }
   },
   "header-layout.mobile": {
@@ -94,7 +93,7 @@
   "flex-layout.row#1-mobile": {
     "children": [
       "drawer",
-      "logo#mobile",
+      "image#mobile",
       "flex-layout.col#spacer",
       "login",
       "minicart.v2"
@@ -121,12 +120,10 @@
     }
   },
 
-  "logo#mobile": {
+  "image#mobile": {
     "props": {
       "title": "Logo",
-      "href": "/",
-      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo-mobile.png",
-      "width": "77.5",
+      "src": "assets/logo-eat-green.png",
       "height": "27.5"
     }
   }

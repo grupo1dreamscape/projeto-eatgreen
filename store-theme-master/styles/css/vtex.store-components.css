@@ -1,20 +1,35 @@
+
+
+
 .notificationBarContainer {
-  background-color: #e6f1e6;
-  color: #03034e;
+  background-color:  #dae5af;
+  color: #657b14;
   font-weight: 700;
   font-size: 12px;
   text-decoration: underline;
 }
 
-.infoCardContainer--info-card-home {
-  max-width: 1520px;
-  margin: 0 auto;
-  background-color: #e6f1e6;
-  padding: 0px;
+.infoCardContainer {
+  background-color: white;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.infoCardCallActionContainer :global(.vtex-button) {
+  color: white;
+  background-color: #fe5f01;
+  border: transparent;
+}
+
+.infoCardCallActionText{
+  font-size: 1.5rem;
+  text-decoration:none;
+  color:#657b14
 }
 
 .newsletter {
-  background-color: #03054e;
+  background-color: #657b14;
   max-width: 1528px;
   margin: 0 auto;
 }
