@@ -99,8 +99,10 @@ export default Countdown*/
 
 // CONTADOR DE HORAS
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
+
+import api from './service/api'
 
 import { TimeSplit } from './typings/global'
 import { tick, getTwoDaysFromNow } from './utils/time'
@@ -116,20 +118,29 @@ const CSS_HANDLES = ['countdown' ]
 
 const Countdown: StorefrontFunctionComponent<CountdownProps> = ({
   targetDate = DEFAULT_TARGET_DATE }) => {
-    const [timeRemaining, setTime] = useState<TimeSplit>({
-    hours: '00',
-    minutes: '00',
-    seconds: '00',
-  });
-
-  
+    
+  const [timeRemaining, setTime] = useState<TimeSplit>({hours: '00',minutes: '00',seconds: '00',});
   const handles = useCssHandles(CSS_HANDLES)
+
+  const [saldo, setSaldo] = useState<number>(0)
+
+  const getSaldo = async () => {
+    const data = await api.post("/buscasaldo/999998")
+    setSaldo(1)
+    console.log(data)
+  }
   
   tick(targetDate, setTime) // função que atualiza o nosso estado a cada um segundo
+  
+  useEffect(() => {
+    // CONECTAR A API DE PONTOS USANDO AXIOS
+    getSaldo()
+    console.log("TESTE CAMILA")
+  }, []);
 
   return (
     <div className={`${handles.countdown} db tc`}>
-      {`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}
+      {`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}${saldo}`}
     </div>
     
   );
