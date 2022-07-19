@@ -129,9 +129,8 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({
 
   return (
     <div className={`${handles.countdown} db tc`}>
-      {`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}
+      {`Você possui ${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds} pontos`}
     </div>
-    
   );
 };
   

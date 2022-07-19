@@ -126,3 +126,20 @@
 .image {
   image-rendering: -webkit-optimize-contrast;
 }
+
+.productDescriptionTitle {
+  font-size: 25px;
+  color: #000000;
+}
+ .content { /*TEXTO DESCRIÇÃO*/
+  text-align: justify;
+  font-size: 20px;
+  color: #3f3f40;
+}
+
+.productDescriptionContainer {
+  background-color:#c0e1c5;
+  border-radius: 5px 30px;
+  padding: 5%;
+}
+
