@@ -1,8 +1,8 @@
 {
   "store.home": {
     "blocks": [
-      "countdown.title",
-      "countdown",
+      "flex-layout.row#countdown.title",
+      "flex-layout.row#countdown",
       "info-card#button-right",
       "info-card#button-left",
       "__fold__.mobile",
@@ -15,6 +15,14 @@
     ]
   },
 
+  "flex-layout.row#countdown.title": {
+    "children": ["countdown.title"]
+  },
+
+  "flex-layout.row#countdown": {
+    "children": ["countdown"]
+  },
+  
   "info-card#button-right": {
     "props": {
       "isFullModeStyle": false,
