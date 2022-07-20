@@ -20,7 +20,7 @@
       "textPosition": "right",
       "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "headline": "Plant Based",
-      "subhead": "Traga novos sabores para sua cozinha.<br> Conheça nossos pratos:",
+      "subhead": "Traga novos sabores para sua cozinha.<br> Conheça nossos pratos",
       "callToActionMode": "button",
       "callToActionText": "Cardápio",
       "callToActionUrl": "/sale/d",
@@ -36,7 +36,7 @@
     "headline": "Refeições Congeladas",
     "subhead": "Receba em casa e acumule pontos.<br>",
     "callToActionMode": "link",
-    "callToActionText": "Quero saber mais!",
+    "callToActionText": "Quero conhecer!",
     "textAlignment": "center",
     "block-class":"button-left"
     }
@@ -96,8 +96,8 @@
       "isFullModeStyle": false,
       "textPosition": "left",
       "imageUrl": "https://images.unsplash.com/photo-1565895405137-3ca0cc5088c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-      "headline": "Clearance Sale",
-      "callToActionText": "DISCOVER",
+      "headline": "Assinatura Mensal",
+      "callToActionText": "Saiba Mais",
       "callToActionUrl": "/sale/d",
       "blockClass": "info-card-home",
       "textAlignment": "center"
