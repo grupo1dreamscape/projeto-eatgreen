@@ -1,9 +1,9 @@
 {
   "vendor": "vtex",
-  "name": "countdown",
+  "name": "back-dreamscape",
   "version": "0.0.1",
-  "title": "Countdown",
-  "description": "Countdown component",
+  "title": "Back-end dreamscape",
+  "description": "back-dreamscape",
   "defaultLocale": "pt-BR",
   "builders": {
     "messages": "1.x",

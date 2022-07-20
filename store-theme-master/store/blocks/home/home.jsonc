@@ -1,7 +1,7 @@
 {
   "store.home": {
     "blocks": [
-      "countdown",
+      "pointcount",
       "info-card#button-right",
       "info-card#button-left",
       "__fold__.mobile",

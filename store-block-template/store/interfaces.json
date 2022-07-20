@@ -5,5 +5,9 @@
 
   "countdown.title": {
     "component": "Title"
+  },
+
+  "pointcount": {
+    "component": "Pointcount"
   }
 }
