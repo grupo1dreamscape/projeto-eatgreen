@@ -1,151 +1,49 @@
-
-
-/*
-CONECTANDO O BACK-END E O FRONT-END
-
 import React, { useState } from 'react'
-import { useQuery } from 'react-apollo'
+
+import axios from 'axios'
 
 
-
-import { useCssHandles } from 'vtex.css-handles'
-import { useProduct } from 'vtex.product-context/useProduct'
-
-
-import { TimeSplit } from './typings/global'
-import { tick, getTwoDaysFromNow } from './utils/time'
-
-import productReleaseDate from './graphql/productReleaseDate.graphql'
-
-
-const DEFAULT_TARGET_DATE = getTwoDaysFromNow()
 
 interface CountdownProps {}
 
-const CSS_HANDLES = ['countdown']
+const Countdown: StorefrontFunctionComponent<CountdownProps> = () => {
 
-const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ }) => {
+  const [ userId , setUserID ] = useState(null)
+  const [ saldo, setSaldo ] = useState(null)
 
-  const [timeRemaining, setTime] = useState<TimeSplit>({
-    hours: '00',
-    minutes: '00',
-    seconds: '00',
-  });
+   axios.get('https://examplestore--dreamscape.myvtex.com/api/vtexid/pub/authenticated/user').then((response) => {
+      setUserID(response.data.userId);
+      console.log(JSON.stringify(response.data.userId))
+    });
 
-  const handles = useCssHandles(CSS_HANDLES)
+    axios.post('https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/buscasaldo/999998')
+    .then((response) => {
+      setSaldo(response.data.Item.saldo);
+      console.log(JSON.stringify(response.data.Item.saldo))
+    });
 
-
-
-  //
-  const { product } = useProduct()
-
-  const { data, loading, error } = useQuery(productReleaseDate, {
-    variables:{
-      slug: product?.linkText
-    },
-    ssr: false
-  })
-  //
-
-  // o product pode ser undefined, precisamos fazer o tratamento de erro
-  if (!product) {
-    return (
-      <div>
-        <span>There is no product context.</span>
-      </div>
-    )
-  }
-
-  if (loading) {
-    return (
-      <div>
-        <span>Loading...</span>
-      </div>
-    )
-  }
-  if (error) {
-    return (
-      <div>
-        <span>Erro!</span>
-      </div>
-    )
-  }
-
-
-
-  
-  tick(data?.product?.releaseDate || DEFAULT_TARGET_DATE, setTime) // função que atualiza o nosso estado a cada um segundo
-
+  if (!userId || !saldo ) return (
+    <div>
+      <h1>Id do Usuario</h1>
+      <h1>Erro</h1>
+      <h1></h1>
+    </div>
+  )
 
   return (
-    <div className={`${handles.countdown} db tc`}>
-      {`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}
+    <div>
+      <h1>Saldo</h1>
+      <h1>{userId}</h1>
+      <h1>{saldo}</h1>
     </div>
-      
-  );
-};
+  )
+}
 
 Countdown.schema = {
   title: 'editor.countdown.title',
   description: 'editor.countdown.description',
   type: 'object',
-  properties: { },
-}
-
-export default Countdown*/
-
-
-
-
-// CONTADOR DE HORAS
-
-import React, { useState } from 'react'
-import { useCssHandles } from 'vtex.css-handles'
-
-import { TimeSplit } from './typings/global'
-import { tick, getTwoDaysFromNow } from './utils/time'
-
-
-const DEFAULT_TARGET_DATE = getTwoDaysFromNow()
-
-interface CountdownProps {
-  targetDate: string
-}
-
-const CSS_HANDLES = ['countdown' ]
-
-const Countdown: StorefrontFunctionComponent<CountdownProps> = ({
-  targetDate = DEFAULT_TARGET_DATE }) => {
-    const [timeRemaining, setTime] = useState<TimeSplit>({
-    hours: '00',
-    minutes: '00',
-    seconds: '00',
-  });
-
-  
-  const handles = useCssHandles(CSS_HANDLES)
-  
-  tick(targetDate, setTime) // função que atualiza o nosso estado a cada um segundo
-
-  return (
-    <div className={`${handles.countdown} db tc`}>
-      {`Você possui ${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds} pontos`}
-    </div>
-  );
-};
-  
-Countdown.schema = {
-  title: 'editor.countdown.title',
-  description: 'editor.countdown.description',
-  type: 'object',
-  properties: {
-    targetDate: {
-      title: 'Data final',
-      description: 'Data final utilizada no contador',
-      type: 'string',
-      default: null,
-    }
-  },
+  properties: {},
 }
 
 export default Countdown

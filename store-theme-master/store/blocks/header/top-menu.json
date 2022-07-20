@@ -1,14 +1,14 @@
-{ 
+{
   "vtex.menu@2.x:menu#websites": {
     "children": [
       "rich-text#top-bar-menu"
     ]
-  }, 
+  },
   "rich-text#top-bar-menu": {
     "props": {
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
-      "text": "APROVEITE NOSSO CARDÁPIO PLANT BASED E ACUME PONTOS PARA SUA PRÓXIMA COMPRA!",
+      "text": "APROVEITE NOSSO CARDÁPIO PLANT BASED E ACUMULE PONTOS PARA SUA PRÓXIMA COMPRA!",
       "font": "t-heading-5",
       "blockClass": "top-bar-menu"
     }
