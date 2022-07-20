@@ -10,9 +10,6 @@ const Pointcount: StorefrontFunctionComponent<PointcountProps> = () => {
   const [ userId , setUserID ] = useState(null)
   const [ userSaldo, setUSerSaldo ] = useState(0)
 
-  console.log(userId);
-  console.log(userSaldo);
-
   useEffect(() => {
     axios.get('/api/vtexid/pub/authenticated/user').then((response) => {
       setUserID(response.data.userId);
@@ -20,7 +17,7 @@ const Pointcount: StorefrontFunctionComponent<PointcountProps> = () => {
     .catch((err) => {
       console.error("ops! ocorreu um erro" + err);
     });
-});
+  });
 
   useEffect(() => {
     axios.post(URLAPI+'/buscasaldo/'+userId)
@@ -30,12 +27,26 @@ const Pointcount: StorefrontFunctionComponent<PointcountProps> = () => {
     .catch((err) => {
       console.error("ops! ocorreu um erro" + err);
     });
-});
+  });
+
+  if(userId) {
+    if(userSaldo) {
+      return (
+        <div>
+          <p>Saldo Atual: {userSaldo}</p>
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <p>Saldo Atual: 0</p>
+        </div>
+      )
+    }
+  }
 
   return (
-    <div>
-      <p>Saldo Atual :{userSaldo}</p>
-    </div>
+    <div></div>
   )
 }
 
