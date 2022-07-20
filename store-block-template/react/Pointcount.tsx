@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import { useCssHandles } from 'vtex.css-handles'
 
 interface PointcountProps {}
+
+const CSS_HANDLES = ['pointcount']
 
 const URLAPI = 'https://nes6120zw5.execute-api.sa-east-1.amazonaws.com';
 
@@ -30,16 +33,18 @@ const Pointcount: StorefrontFunctionComponent<PointcountProps> = () => {
     });
   });
 
+  const handles = useCssHandles(CSS_HANDLES)
+
   if(userId) {
     if(userSaldo) {
       return (
-        <div>
-          <p>Saldo Atual: {userSaldo}</p>
+        <div className={`${handles.pointcount} db tc`}>
+          <p>{`Saldo Atual: ${userSaldo}`}</p>
         </div>
       )
     } else {
       return (
-        <div>
+        <div className={`${handles.pointcount} db tc`}>
           <p>Saldo Atual: 0</p>
         </div>
       )
