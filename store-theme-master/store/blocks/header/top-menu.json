@@ -1,43 +1,16 @@
-{
+{ 
   "vtex.menu@2.x:menu#websites": {
     "children": [
-      "menu-item#shop",
-      "menu-item#about-us"
+      "rich-text#top-bar-menu"
     ]
-  },
-  "menu-item#shop": {
+  }, 
+  "rich-text#top-bar-menu": {
     "props": {
-      "id": "menu-item-shop",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "#",
-        "noFollow": false,
-        "tagTitle": "Shop",
-        "text": "Comprar"
-      }
-    }
-  },
-  "vtex.menu@2.x:menu#institutional": {
-    "children": [
-      "menu-item#vtex-website"
-    ]
-  },
-  "menu-item#vtex-website": {
-    "props": {
-      "id": "menu-item-vtex-website",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "external",
-        "href": "http://vtex.com",
-        "noFollow": false,
-        "tagTitle": "visit vtex.com",
-        "text": "visit vtex.com"
-      }
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "APROVEITE NOSSO CARDÁPIO PLANT BASED E ACUME PONTOS PARA SUA PRÓXIMA COMPRA!",
+      "font": "t-heading-5",
+      "blockClass": "top-bar-menu"
     }
   }
 }

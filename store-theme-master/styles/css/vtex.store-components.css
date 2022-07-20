@@ -143,3 +143,17 @@
   padding: 5%;
 }
 
+/*verificar*/
+
+.imageElement--logo{
+  margin-left: 80px;
+
+}
+
+.autoCompleteOuterContainer {
+  width: 450px;
+}
+
+.searchBarContainer {
+  width: 450px;
+}

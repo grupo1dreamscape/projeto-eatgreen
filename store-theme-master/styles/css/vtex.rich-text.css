@@ -91,3 +91,9 @@
     line-height: 1.3em;
   }
 }
+
+.paragraph--top-bar-menu { 
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  text-align: center;
+}
