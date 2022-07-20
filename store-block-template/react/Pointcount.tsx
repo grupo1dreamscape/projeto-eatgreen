@@ -11,8 +11,9 @@ const Pointcount: StorefrontFunctionComponent<PointcountProps> = () => {
   const [ userSaldo, setUSerSaldo ] = useState(0)
 
   useEffect(() => {
-    axios.get('/api/vtexid/pub/authenticated/user').then((response) => {
-      setUserID(response.data.userId);
+    axios.get('/no-cache/profileSystem/getProfile')
+    .then((response) => {
+      setUserID(response.data.UserId);
     })
     .catch((err) => {
       console.error("ops! ocorreu um erro" + err);
