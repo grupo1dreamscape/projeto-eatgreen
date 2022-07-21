@@ -21,11 +21,11 @@ Maria não está preocupada com o uso dos pontos após a geração, pois ela já
 Atualizar saldo:
 
 URL: https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/atualizarsaldo/{id}/{pontos}
-Metodo "POST ":
-Onde:
+<br>Metodo "POST ":
+<br>Onde:
 - {id} identificacao do usuario TIPO String
 - {pontos} é o valor a ser a ser contabilizado TIPO numerico POSITIVO/NEGATIVO
-Retorno: Saldo TIPO numerico
+<br>Retorno: Saldo TIPO numerico
 
 Exemplos:
 Somar:
@@ -36,10 +36,10 @@ https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/atualizarsaldo/1/-50
 Consultar saldo:
 
 URL: https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/buscasaldo/{id}
-Metodo "POST ":
-Onde:
+<br>Metodo "POST ":
+<br>Onde:
 - {id} identificacao do usuario TIPO String
-Retorno: Saldo TIPO numerico
+<br>Retorno: Saldo TIPO numerico
 
 Exemplo:
 https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/buscarsaldo/1
