@@ -15,6 +15,34 @@ Maria não está preocupada com o uso dos pontos após a geração, pois ela já
 - Workspaces compartilhados na plataforma **VTEX IO**;
 - **Toolbelt VTEX** para criação da UI;
 - Backend montado na estrutura **Amazon Web Services**;
+
+#### PASSO A PASSO ENDPOINT SALDO: ####
+
+Atualizar saldo:
+
+URL: https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/atualizarsaldo/{id}/{pontos}
+<br>Metodo "POST ":
+<br>Onde:
+- {id} identificacao do usuario TIPO String
+- {pontos} é o valor a ser a ser contabilizado TIPO numerico POSITIVO/NEGATIVO
+<br>Retorno: Saldo TIPO numerico
+<br>Exemplos:
+<br>Somar:
+https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/atualizarsaldo/1/100
+<br>Debitar:
+https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/atualizarsaldo/1/-50
+
+Consultar saldo:
+
+URL: https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/buscasaldo/{id}
+<br>Metodo "POST ":
+<br>Onde:
+- {id} identificacao do usuario TIPO String
+<br>Retorno: Saldo TIPO numerico
+<br>Exemplo:
+https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/buscarsaldo/1
+
+
 ___
 
 ![logo-eat-green](https://user-images.githubusercontent.com/109383851/179417609-43b7c796-3994-432e-92eb-42839a4f0fa0.png)
@@ -54,6 +82,7 @@ Aqui temos comidas plant-based surpreendentes, que te ajudam a sentir mais levez
 Tudo isso com receitas incríveis, criativas, elaboradas por nutricionistas que entendem pra chuchu do assunto. Pense **verde**!
 Conheca as nossas refeições clicando **[aqui!](https://dreamscapeloja1--dreamscape.myvtex.com/)**
 <br>
+
 
 ![VTEX_Logo svg](https://user-images.githubusercontent.com/109383851/179416600-c9f74716-f9d2-44b7-9bef-4f9a02df5bc3.png)
 ![456b8d86743825 Y3JvcCwyMTUwLDE2ODEsMCwzNDA](https://user-images.githubusercontent.com/109383851/179416794-4181061a-f739-46d3-9b8a-f1abd37cf57f.jpg)
