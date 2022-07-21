@@ -26,11 +26,10 @@ URL: https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/atualizarsaldo/{id}/
 - {id} identificacao do usuario TIPO String
 - {pontos} é o valor a ser a ser contabilizado TIPO numerico POSITIVO/NEGATIVO
 <br>Retorno: Saldo TIPO numerico
-
 Exemplos:
-Somar:
+<br>Somar:
 https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/atualizarsaldo/1/100
-Debitar:
+<br>Debitar:
 https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/atualizarsaldo/1/-50
 
 Consultar saldo:
@@ -40,8 +39,7 @@ URL: https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/buscasaldo/{id}
 <br>Onde:
 - {id} identificacao do usuario TIPO String
 <br>Retorno: Saldo TIPO numerico
-
-Exemplo:
+<br>Exemplo:
 https://nes6120zw5.execute-api.sa-east-1.amazonaws.com/buscarsaldo/1
 
 
