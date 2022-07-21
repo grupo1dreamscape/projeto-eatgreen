@@ -96,7 +96,7 @@
     "children": [
       "drawer",
       "image#mobile",
-      "flex-layout.col#spacer",
+      /* "flex-layout.col#spacer", */
       "login",
       "minicart.v2"
     ],
@@ -113,9 +113,12 @@
 
   "menu#drawer": {
     "children": [
-      "menu-item#category-apparel",
+      "search-bar",
+      "login",
       "menu-item#category-home",
-      "menu-item#more"
+      "menu-item#category-apparel",
+      "menu-item#more",
+      "menu-item#about-us"
     ],
     "props": {
       "orientation": "vertical"

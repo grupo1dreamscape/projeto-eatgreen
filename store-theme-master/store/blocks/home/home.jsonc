@@ -61,7 +61,7 @@
 
   "rich-text#shelf-title": {
     "props": {
-      "text": "Refeições EatGreen",
+      "text": "Refeições Eat Green",
       "blockClass": "shelfTitle"
     }
   },
