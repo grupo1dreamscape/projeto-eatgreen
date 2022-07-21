@@ -6,7 +6,8 @@
     "children": [
       "menu-item#category-home",
       "menu-item#category-apparel",
-      "menu-item#more"
+      "menu-item#more",
+      "menu-item#about-us"
     ]
   },
   "menu-item#category-apparel": {
@@ -19,7 +20,7 @@
         "type": "internal",
         "href": "/search",
         "noFollow": false,
-        "tagTitle": "Refeicoes",
+        "tagTitle": "Refeições",
         "text": "Refeições"
       }
     }
@@ -52,8 +53,8 @@
         "type": "internal",
         "href": "#",
         "noFollow": true,
-        "tagTitle": "More",
-        "text": "More"
+        "tagTitle": "Saiba Mais",
+        "text": "Saiba Mais"
       }
     },
     "blocks": [
@@ -89,7 +90,6 @@
       "orientation": "vertical"
     },
     "children": [
-      "menu-item#about-us",
       "menu-item#faq"
     ]
   },
@@ -103,8 +103,8 @@
         "type": "internal",
         "href": "/about-us",
         "noFollow": true,
-        "tagTitle": "About us",
-        "text": "About us"
+        "tagTitle": "Sobre nós",
+        "text": "Sobre nós"
       }
     }
   },
